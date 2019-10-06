@@ -1,0 +1,5 @@
+@mixin responsive($param) {
+    @media screen and (min-width: $param)  {
+        @content;
+    }
+}
