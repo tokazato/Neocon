@@ -57,6 +57,7 @@ header {
     justify-content: space-between;
     align-items: center;
     height: 100%;
+    width: 100%;
     padding: 0 16px;
 }
 .for-mobile-logo {
@@ -535,9 +536,6 @@ footer i {
     @include responsive(630px){
         height: 800px;
     }
-    @include responsive(682px){
-        height: 860px;
-    }
 }
 .management-swiper-slide {
     @include responsive(900px){
@@ -575,14 +573,15 @@ footer i {
 .managment-swiper-img-box {
     position: relative;
     width: 80%;
+    height: 95%;
     @include responsive(682px){
-        height: 412px;
+        height: 372px;
     }
     @include responsive(900px){
         width: 60%;
     }
     @include responsive(1300px){
-        width: 780px;
+        width: 700px;
     }
 }
 .managment-swiper-img-box img {
@@ -790,6 +789,18 @@ footer i {
 .service-img-box {
    display: flex;
    justify-content: flex-end;
+   img {
+    width: 255px;
+    height: 219px;
+    @include responsive(550px) {
+        width: 355px;
+        height: 319px;
+    }
+    @include responsive(700px) {
+        width: 505px;
+        height: 319px;
+    }
+   }
 }
 .service-content-box p {
     position: relative;
@@ -810,6 +821,50 @@ footer i {
     align-items: center;
     padding: 0 16px;
     height: 100%;
+}
+.services-for-mobile {
+    @include responsive(900px){
+        display: none;
+    }
+}
+
+// services for desctop
+.services-page-desctop-version {
+    padding: 0 16px;
+    display: none;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    @include responsive(900px){
+        display: flex;
+    }
+}
+.services-page-desctop-version-navigation {
+    display: flex;
+    flex-direction: column;
+    color: #fff;
+    h2 {
+        color: $color-gray;
+        font-size: 26px;
+        font-family: tatishvili;
+    }
+    a {
+        color: #fff;
+        font-size: 26px;
+        font-family: arial2010;
+        margin: 13px 0;
+        transition: 0.3s ease;
+        &:hover {
+            color: $color-orange;
+            transition: 0.3s ease;
+        }
+    }
+    a.active {
+        color: $color-orange;
+    }
+}
+.services-swiper-box {
+    width: 72%;
 }
 
 
@@ -952,9 +1007,269 @@ footer i {
 .contact-footer {
     @include responsive(1000px){
         display: none;
-      }
+    }
 }
 
+// project page 
+
+.procejt-page-header {
+    height: 180px;
+    @include responsive(1100px){
+        height: 110px;
+    }
+}
+.procejt-page-header-content {
+    display: flex; 
+    flex-direction: column; 
+    align-items: center; 
+    justify-content: space-between; 
+    width: 100%;
+    height: 100%;
+}
+.project-page-navigation {
+    display: flex;
+    @include responsive(1100px){
+        display: none;
+    }
+}
+.project-page-complited, .project-page-current {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 0 23px;
+    h1 {
+        color: #fff;
+        font-family: oswaldRegular;
+        font-size: 18px;
+        cursor: pointer;
+        transition: 0.3s ease;
+        &:hover {
+            color: $color-orange;
+            transition: 0.3s ease;
+        }
+    }
+    h1.active {
+        color: $color-orange;
+    }
+    p{
+        margin-bottom: 10px;
+        color: $color-gray;
+        font-size: 12px;
+        font-family: oswavld;
+    }
+}
+.project-box {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 16px;
+}
+.project-navigation {
+    display: none;
+    color: #fff;
+    h2 {
+        font-size: 26px;
+        color: $color-gray;
+        margin-bottom: 68px;
+    }
+    @include responsive(1100px){
+        display: block;
+    }
+}
+.project-title-box {
+    margin: 52px 0;
+}
+.project-title {
+    font-size: 26px;
+    font-family: arial2010;
+    transition: 0.3s ease;
+    cursor: pointer;
+    &:hover {
+        color: $color-orange;
+        transition: 0.3s ease;
+    }
+}
+.project-title.active {
+    color: $color-orange;
+}
+.project-quantity-content {
+    font-size: 16px;
+    font-family: arial2010;
+    color: $color-gray;
+    margin-top: 10px;
+}
+.project-swiper-img-box {
+    height: 80%;
+}
+.project-swiper-img-address {
+    display: flex;
+    align-items: center;
+    height: 43px;
+    width: 80%;
+    background: $color-lightBlack;
+    @include responsive(900px){
+        width: initial;
+        background: initial;
+    }
+}
+.project-swiper-img-person-position {
+    display: flex;
+    align-items: center;
+    font-size: 13px;
+    color: #fff;
+    font-family: oswaldRegular;
+    height: 100%;
+    width: 100%;
+    padding-left: 10px;
+    @include responsive(380px){
+        font-size: 16px;
+    }
+    @include responsive(420px){
+        font-size: 18px;
+    }
+    @include responsive(900px){
+        font-size: 50px;
+    }
+}
+.project-swiper-slide {
+    @include responsive(900px){
+        display: flex;
+        flex-direction: row-reverse;
+        align-items: center;
+        justify-content: flex-end;
+    }
+}
+.project-address-name {
+    @include responsive(900px){
+        display: none;
+    }
+}
+.project-swiper-box {
+    width: 100%;
+    height: 500px;
+    @include responsive(380px){
+        height: 540px;
+    }
+    @include responsive(470px){
+        height: 640px;
+    }
+    @include responsive(550px){
+        height: 740px;
+    }
+    @include responsive(630px){
+        height: 800px;
+    }
+    @include responsive(1100px){
+        width: 80%;
+    }
+}
+
+
+// project inside page 
+.project-inside-box {
+    
+}
+.project-inside-swiper-img-box {
+    width: 80%;
+    height: initial;
+    @include responsive(700px){
+        height: 583px;
+    }
+    @include responsive(800px){
+        width: 420px;
+        margin-left: 100px;
+    }
+    @include responsive(1400px){
+        width: 620px;
+    }
+}
+.project-inside-swiper-img-address {
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+.project-inside-finished {
+    color: $color-gray;
+    font-size: 12px;
+    font-family: oswald;
+    padding-right: 5px;
+}
+.project-inside-description-img {
+    display: flex;
+    width: 100%;
+}
+.project-inside-description-img-text-box {
+    color: #fff;
+    margin-top: 17px;
+    font-size: 12px;
+    font-family: oswaldRegular;
+    padding-right: 25px;
+}
+.project-inside-prev-button, .project-inside-next-button {
+    position: absolute;
+    right: 0;
+    color: #fff;
+    font-size: 12px;
+    font-family: oswald;
+    padding-right: 10px;
+}
+.project-inside-prev-button {
+    @include responsive(900px){
+       left: 30px;
+       top: 180px;
+       font-size: 14px;
+    }
+}
+.project-inside-next-button{
+    bottom: 42%;
+    @include responsive(340px){
+        bottom: 37%;
+    }
+    @include responsive(380px){
+        bottom: 42%;
+    }
+    @include responsive(470px){
+        bottom: 40%;
+    }
+    @include responsive(630px){
+        bottom: 35%;
+    }
+    @include responsive(700px){
+        bottom: 28%;
+    }
+    @include responsive(900px){
+        bottom: 300px;
+        // right: 30%;
+    }
+}
+.project-inside-black-line {
+    @include responsive(900px){
+        position: absolute;
+        top: 250px;
+        height: 200px;
+        width: 100%;
+        background: $color-lightBlack;
+     }
+}
+.project-inside-swiper-scrollbar {
+    background: #fff;
+    height: 30% !important;
+    top: 70px !important;
+    @include responsive(470px){
+        height: 40% !important;
+    }
+    @include responsive(630px){
+        height: 50% !important;
+    }
+    @include responsive(630px){
+        height: 50% !important;
+        top: 80px !important;
+    }
+    @include responsive(900px){
+        height: 3px !important;
+        top: initial !important;
+    }
+}
 
 
 
