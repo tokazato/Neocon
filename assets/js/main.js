@@ -14,13 +14,15 @@ $(document).ready(function(){
     $(".openDropDownLink").on('click', function(){
         $('.dropDownContentBox').toggleClass("active");
     });
-
     $(".text-send-message-box").on("click", function(){
         $(".contact-form").slideDown('slow');
         $(this).css("background", "#1D2022");
         $('.text-send-message-content').css("color", "#111517");
         $(this).css("cursor", "not-allowed");
     })
+
+    // management 
+    
 
     
 })

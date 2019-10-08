@@ -10,19 +10,20 @@ var swiper2 = new Swiper('.swiper-container', {
       el: '.swiper-pagination',
       type: 'fraction',
     },
-    // spaceBetween: 100,
+    
+    breakpoints: {
+      // when window width is >= 320px
+      0: {
+        spaceBetween: 62,
+      },
+      // when window width is >= 640px
+      680: {
+        spaceBetween: 85,
+      }
+    },
   });
 
-  $(document).ready(function(){
-    //   var active = $('.swiper-slide-active');
-    //   if(active == true) {
-    //       alert('sada')
-    //   }
-
-    // $('.swiper-slide-active').on('click', function(){
-    //     alert('adsas')
-    // })
-  });
+  
 
 
 

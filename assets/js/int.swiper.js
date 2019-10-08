@@ -12,6 +12,7 @@ var swiper = new Swiper('.main-swiper-container', {
       nextEl: '.main-swiper-button-next',
       prevEl: '.main-swiper-button-prev',
     },
+    spaceBetween: 100,
   });
 
   

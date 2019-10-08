@@ -11,6 +11,10 @@ var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
     }
   },
+  navigation: {
+    nextEl: '.project-inside-next-button',
+    prevEl: '.project-inside-prev-button',
+  },
     slidesPerView: 1,
     spaceBetween: 30,
     mousewheel: true,
