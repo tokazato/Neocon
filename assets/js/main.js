@@ -21,7 +21,24 @@ $(document).ready(function(){
         $(this).css("cursor", "not-allowed");
     })
 
-    // management 
+    // project-inside
+    
+   
+    $('.project-inside-small-img').on('click', function(){
+        var smallImg = $('.project-inside-small-img').attr('src');
+        var bigImg = $(".project-inside-big-img").attr('src');
+        $(".project-inside-big-img").attr('src', smallImg );
+        $('.project-inside-small-img').attr('src', bigImg );
+        
+
+
+
+
+        // smallImg = $(this).attr('src');
+        // $(this).attr('src', bigImg );
+        // bigImg.attr('src', smallImg);
+        
+    })
     
 
     

@@ -98,12 +98,13 @@ nav {
     visibility: hidden;
     position: absolute;
     z-index: 99;
-    top: 110px;
+    top: 85px;
     background: $color-black;
     width: 100%;
-    height: calc(100vh - 110px);
+    height: calc(100vh - 92px);
     @include responsive(900px){
-        // height: calc(100vh - 150px);
+        height: calc(100vh - 110px);
+        top: 110px;
      }
 }
 .openNavigation {
@@ -966,6 +967,10 @@ footer i {
     padding: 0 16px;
     margin-top: 10px;
 }
+.services-swiper-slide {
+    display: flex;
+    justify-content: flex-end;
+}
 .service-img-box {
    display: flex;
    justify-content: flex-end;
@@ -1003,6 +1008,7 @@ footer i {
     height: 100%;
 }
 .services-for-mobile {
+    min-height: calc(100vh - 180px);
     @include responsive(900px){
         display: none;
     }
@@ -1053,6 +1059,7 @@ footer i {
     height: 60vh;
     display: flex;
     width: 100%;
+    // min-height: calc(100vh - 150px);
     @include responsive(1100px){
         height: 70vh;
     }
@@ -1115,9 +1122,13 @@ footer i {
 .contact-box {
     padding: 0 16px;
     margin-top: 50px;
+    min-height: calc(100vh - 220px);
     @include responsive(700px){
         display: flex;
         justify-content: space-between;
+    }
+    @include responsive(900px){
+        min-height: initial;
     }
 }
 .contact-box-first-content {
@@ -1153,6 +1164,7 @@ footer i {
     }
 }
 .contact-box-second-content {
+    padding-bottom: 75px;
     @include responsive(1000px){
         width: 40%;
     }
@@ -1414,12 +1426,9 @@ footer i {
 
 
 // project inside page 
-.project-inside-box {
-    
-}
 .project-inside-swiper-img-box {
     width: 80%;
-    height: 300px;
+    height: 210px;
     @include responsive(470px){
         height: 500px;
     }
@@ -1432,15 +1441,17 @@ footer i {
     }
     @include responsive(900px){
         display: flex;
+        height: 703px;
     }
     @include responsive(1400px){
         width: 620px;
+        height: 749px;
     }
 }
 .project-inside-desctop-finished-box{
     display: none;
     @include responsive(900px){
-        
+        margin-left: 20px;
         display: flex;
         align-items: flex-end;
         font-size: 16px;
@@ -1489,6 +1500,8 @@ footer i {
     @include responsive(900px){
         padding: 0 25px;
         width: 70%;
+        position: relative;
+        bottom: 70px;
      }
 }
 .project-inside-prev-button, .project-inside-next-button {
@@ -1591,7 +1604,7 @@ footer i {
     @include responsive(900px){
         display: flex;
         flex-direction: column;
-        justify-content: space-around;
+        justify-content: space-between;
         width: 39%;
     } 
 }
@@ -1623,7 +1636,7 @@ footer i {
 }
 .project-inside-swiper-box {
     @include responsive(900px){
-        height: 750px;
+        height: 784px;
     }
 }
 .project-inside-footer {
@@ -1638,7 +1651,10 @@ footer i {
     height: 67px;
     width: 100%;
     position: absolute;
-    bottom: 200px;
+    bottom: 81px;
+    @include responsive(1400px){
+        bottom: 35px;
+     }
 }
 .project-inside-black-line-footer-count-slider {
     display: none;
@@ -1665,9 +1681,148 @@ footer i {
 .project-inside-img-location {
     @include responsive(900px){
         position: relative;
-        top: 70px;
+        top: 160px;
      }  
 }
+.project-inside-arrow-buttons-box {
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    position: relative;
+    z-index: 15;
+    @include responsive(900px){
+        .project-inside-next {
+            float: right;
+        }
+     } 
+    @include responsive(1200px){
+        position: absolute;
+        top: 177px;
+        height: 400px;
+        width: 580px;
+        left: 20px;
+     }
+     @include responsive(1400px){
+        width: 780px;
+        height: 440px;
+     } 
+}
+.project-inside-pagenation-box {
+    height: 200px;
+    width: 50px;
+    @include responsive(470px){
+        height: 490px;
+    }
+    @include responsive(700px){
+        height: 570px;
+    }
+    @include responsive(900px){
+        display: flex;
+        height: 80px;
+        width: 30%;
+    }
+    @include responsive(1200px){
+        position: static;
+    }
+}
+.project-inside-scroll {
+    height: 100% !important;
+    margin: 0 auto;
+    @include responsive(900px){
+        height: 2px !important;
+        width: 100%;
+    }
+    @include responsive(1200px){
+        background: $color-black;
+    }
+}
+.project-inside-pagenation {
+    bottom: initial;
+    height: 80%;
+    @include responsive(900px){
+        height: 100%;
+    }
+    @include responsive(1200px){
+       height: 40px;
+       position: absolute;
+       top: 647px;
+       left: 33%;
+       .swiper-pagination-current{
+        font-size: 30px;
+       }
+       .swiper-pagination-total {
+        display: none !important;
+        }
+    }
+    @include responsive(1400px){
+        top: 693px;
+        left: 35%;
+    }
+}
+.project-inside-swiper-scroll-box {
+    height: 50%;
+    width: 100%;
+    position: absolute;
+    @include responsive(900px){
+        height: 80px;
+        width: 100%;
+        display: flex;
+        align-items: center;
+    }
+    @include responsive(1200px){
+        top: 630px;
+        left: 60%;
+        width: 20%;
+    }
+    @include responsive(1400px){
+        top: 676px;
+        left: 66%;
+        width: 17%;
+    }
+    @include responsive(1500px){
+        left: 63%;
+    }
+    @include responsive(1700px){
+        left: 64%;
+    }
+}
+.project-inside-prev, .project-inside-next {
+    position: relative;
+    z-index: 6;
+    cursor: pointer;
+}
+.project-inside-footer-desctop {
+    display: none;
+    @include responsive(900px){
+        position: absolute;
+        bottom: 50px;
+        display: flex; 
+        align-items: flex-start;
+        flex-direction: column; 
+        justify-content: space-between;
+        height: 300px; 
+        width: 100px; 
+        padding: 0 16px;
+    }
+    
+}
+.project-inside-footer-desctop-icons-box {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 150px;
+    a {
+        color: $color-gray;
+    }
+}
+.project-inside-footer-contact-text {
+    left: -16px;
+    color: $color-gray;
+}
+
 
 
 

@@ -12,13 +12,17 @@ var swiper = new Swiper('.swiper-container', {
     }
   },
   navigation: {
-    nextEl: '.project-inside-next-button',
-    prevEl: '.project-inside-prev-button',
+    nextEl: '.project-inside-next',
+    prevEl: '.project-inside-prev',
   },
     slidesPerView: 1,
     spaceBetween: 30,
     mousewheel: true,
     scrollbar: {
-        el: '.project-inside-swiper-scrollbar',
-      },
+        el: '.managment-swiper-scrollbar',
+    },
+    pagination: {
+      el: '.swiper-pagination',
+      type: 'fraction',
+    },
 });
