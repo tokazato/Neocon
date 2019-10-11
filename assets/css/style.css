@@ -121,6 +121,13 @@ nav {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+  height: 100%;
+}
+
+@media screen and (min-width: 900px) {
+  nav {
+    padding-bottom: 150px;
+  }
 }
 
 .open-navigation-box.active {
@@ -138,13 +145,13 @@ nav {
   top: 85px;
   background: #111517;
   width: 100%;
-  height: calc(100vh - 92px);
+  height: calc(100vh - 85px);
 }
 
 @media screen and (min-width: 900px) {
   .open-navigation-box {
-    height: calc(100vh - 110px);
-    top: 110px;
+    height: calc(100vh - 135px);
+    top: 135px;
   }
 }
 
@@ -210,13 +217,31 @@ nav {
   transition: 0.3s ease;
 }
 
-.dropDownContentBox {
-  margin-left: 30px;
-  display: none;
+.openDropDownLink {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
 }
 
-.dropDownContentBox.active {
-  display: block;
+@media screen and (min-width: 900px) {
+  .openDropDownLink:hover .drop-down-box {
+    display: block;
+  }
+}
+
+.dropDownContentBox {
+  padding-left: 60px;
+}
+
+.dropDownContentBox li {
+  padding: 0 !important;
+}
+
+.drop-down-box {
+  display: none;
+  position: absolute;
+  top: 22%;
+  left: 56%;
 }
 
 .dropDownContentBox > li {
@@ -644,6 +669,12 @@ nav {
   outline: none;
 }
 
+@media screen and (min-width: 900px) {
+  .next, .prev {
+    font-size: 14px;
+  }
+}
+
 .fa-chevron-right {
   margin-left: 10px;
 }
@@ -722,9 +753,6 @@ footer {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -947,7 +975,7 @@ footer i {
 }
 
 .managment-swiper-scrollbar-box {
-  height: 90%;
+  height: 100%;
   width: 23px;
   position: absolute;
   top: 0;
@@ -973,7 +1001,7 @@ footer i {
   background: #1D2022;
   display: block;
   width: 203px;
-  height: 70px;
+  height: 60px;
   padding: 10px;
 }
 
@@ -1014,12 +1042,6 @@ footer i {
   height: 95%;
 }
 
-@media screen and (min-width: 682px) {
-  .managment-swiper-img-box {
-    height: 372px;
-  }
-}
-
 @media screen and (min-width: 900px) {
   .managment-swiper-img-box {
     width: 60%;
@@ -1044,11 +1066,25 @@ footer i {
 }
 
 .managment-swiper-img-title-box {
-  visibility: hidden;
+  display: none;
+}
+
+@media screen and (min-width: 900px) {
+  .managment-swiper-img-title-box {
+    display: block;
+    visibility: hidden;
+  }
 }
 
 .swiper-slide-active .managment-swiper-img-title-box {
-  visibility: visible;
+  display: block;
+}
+
+@media screen and (min-width: 900px) {
+  .swiper-slide-active .managment-swiper-img-title-box {
+    display: block;
+    visibility: visible;
+  }
 }
 
 .managment-swiper-img-read-more {
@@ -1068,7 +1104,7 @@ footer i {
   font-size: 12px;
   font-family: oswald;
   position: absolute;
-  top: 50%;
+  top: 75%;
   -webkit-transform: translate(0, -50%);
           transform: translate(0, -50%);
   right: -40px;
@@ -1121,6 +1157,7 @@ footer i {
   font-size: 12px;
   font-family: arial2010;
   color: #fff;
+  margin-right: 10px;
 }
 
 .management2-back-button i {
@@ -1137,7 +1174,7 @@ footer i {
   background: #1D2022;
   display: block;
   width: 203px;
-  height: 70px;
+  height: 60px;
   padding: 10px;
 }
 
@@ -1272,7 +1309,7 @@ footer i {
   display: -ms-flexbox;
   display: flex;
   position: absolute;
-  width: 85%;
+  width: 94%;
   top: 269px;
   z-index: 3;
 }
@@ -1954,7 +1991,7 @@ footer i {
 
 @media screen and (min-width: 1100px) {
   .procejt-page-header {
-    height: 110px;
+    height: 150px;
   }
 }
 
@@ -2045,7 +2082,7 @@ footer i {
     -webkit-box-align: center;
         -ms-flex-align: center;
             align-items: center;
-    min-height: calc(100vh - 110px);
+    min-height: calc(100vh - 150px);
   }
 }
 
@@ -2132,7 +2169,6 @@ footer i {
           align-items: center;
   font-size: 13px;
   color: #fff;
-  font-family: oswaldRegular;
   height: 100%;
   width: 100%;
   padding-left: 10px;
@@ -2154,6 +2190,12 @@ footer i {
   .project-swiper-img-person-position {
     font-size: 30px;
     position: absolute;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .project-swiper-img-person-position {
+    font-size: 50px;
   }
 }
 
@@ -2196,7 +2238,7 @@ footer i {
 @media screen and (min-width: 1470px) {
   .project-swiper-box {
     width: 80%;
-    height: calc(100vh - 147px);
+    height: calc(100vh - 187px);
   }
 }
 
@@ -2722,6 +2764,10 @@ footer i {
 .project-inside-pagenation {
   bottom: initial;
   height: 80%;
+}
+
+.project-inside-pagenation span {
+  font-size: 12px;
 }
 
 @media screen and (min-width: 900px) {

@@ -87,6 +87,10 @@ header {
 nav {
     display: flex;
     align-items: center;
+    height: 100%;
+    @include responsive(900px){
+       padding-bottom: 150px;
+    }
 }
 .open-navigation-box.active {
     opacity: 1;
@@ -101,10 +105,10 @@ nav {
     top: 85px;
     background: $color-black;
     width: 100%;
-    height: calc(100vh - 92px);
+    height: calc(100vh - 85px);
     @include responsive(900px){
-        height: calc(100vh - 110px);
-        top: 110px;
+        height: calc(100vh - 135px);
+        top: 135px;
      }
 }
 .openNavigation {
@@ -133,21 +137,34 @@ nav {
     color: $color-orange;
 }
 .navigationUl > li > a {
-        height: 100%;
-        width: 100%;
-        color: #fff;
+    height: 100%;
+    width: 100%;
+    color: #fff;
+    transition: 0.3s ease;
+    &:hover {
+        color: $color-orange;
         transition: 0.3s ease;
-        &:hover {
-            color: $color-orange;
-            transition: 0.3s ease;
-        }
     }
-.dropDownContentBox {
-    margin-left: 30px;
-    display: none;
 }
-.dropDownContentBox.active {
-    display: block;
+.openDropDownLink {
+    display: flex;
+    &:hover .drop-down-box {
+        @include responsive(900px){
+            display: block;
+         }    
+    }
+}
+.dropDownContentBox {
+    padding-left: 60px;
+    li {
+        padding: 0 !important;
+    }
+}
+.drop-down-box {
+    display: none;
+    position: absolute;
+    top: 22%;
+    left: 56%;
 }
 .dropDownContentBox > li {
         padding: 10px 0;
@@ -417,6 +434,9 @@ nav {
     font-size: 12px;
     font-family: arian2010;
     outline: none;
+    @include responsive (900px) {
+        font-size: 14px;
+    }
 }
 .fa-chevron-right {
     margin-left: 10px;
@@ -471,7 +491,6 @@ footer {
 }
 .footerContent {
     display: flex;
-    justify-content: center;
     align-items: center;
     width: 100%;
     height: 100%;
@@ -617,7 +636,7 @@ footer i {
     }
 }
 .managment-swiper-scrollbar-box {
-    height: 90%; 
+    height: 100%; 
     width: 23px; 
     position: absolute; 
     top: 0; 
@@ -635,7 +654,7 @@ footer i {
     background: $color-lightBlack;
     display: block;
     width: 203px;
-    height: 70px;
+    height: 60px;
     padding: 10px;
     @include responsive(900px){
         background: initial;
@@ -662,9 +681,6 @@ footer i {
     position: relative;
     width: 80%;
     height: 95%;
-    @include responsive(682px){
-        height: 372px;
-    }
     @include responsive(900px){
         width: 60%;
         margin-right: 100px;
@@ -682,10 +698,18 @@ footer i {
     opacity: 1;
 }
 .managment-swiper-img-title-box {
-    visibility: hidden;
+    display: none;
+    @include responsive(900px){
+        display: block;
+        visibility: hidden;
+    }
 }
 .swiper-slide-active .managment-swiper-img-title-box {
-    visibility: visible;
+    display: block;
+    @include responsive(900px){
+        display: block;
+        visibility: visible;
+    }
 }
 .managment-swiper-img-read-more {
     display: none;
@@ -700,7 +724,7 @@ footer i {
     font-size: 12px;
     font-family: oswald;
     position: absolute;
-    top: 50%;
+    top: 75%;
     transform: translate(0, -50%);
     right: -40px;
     z-index: 3;
@@ -736,6 +760,7 @@ footer i {
     font-size: 12px;
     font-family: arial2010;
     color: #fff;
+    margin-right: 10px;
     i{
         font-size: 10px;
     }
@@ -749,7 +774,7 @@ footer i {
     background: $color-lightBlack;
     display: block;
     width: 203px;
-    height: 70px;
+    height: 60px;
     padding: 10px;
     @include responsive(700px){
        margin-top: 50px;
@@ -828,7 +853,7 @@ footer i {
     height: 50px;
     display: flex;
     position: absolute;
-    width: 85%;
+    width: 94%;
     top: 269px;
     z-index: 3;
     @include responsive(500px){
@@ -1270,7 +1295,7 @@ footer i {
 .procejt-page-header {
     height: 180px;
     @include responsive(1100px){
-        height: 110px;
+        height: 150px;
     }
 }
 .procejt-page-header-content {
@@ -1321,7 +1346,7 @@ footer i {
     padding-bottom: 24px;
     @include responsive(1100px){
         align-items: center;
-        min-height: calc(100vh - 110px);
+        min-height: calc(100vh - 150px);
     }
 }
 .project-navigation {
@@ -1382,7 +1407,6 @@ footer i {
     align-items: center;
     font-size: 13px;
     color: #fff;
-    font-family: oswaldRegular;
     height: 100%;
     width: 100%;
     padding-left: 10px;
@@ -1395,6 +1419,9 @@ footer i {
     @include responsive(900px){
         font-size: 30px;
         position: absolute;
+    }
+    @include responsive(1200px){
+        font-size: 50px;
     }
 }
 .project-swiper-slide {
@@ -1420,7 +1447,7 @@ footer i {
     }
     @include responsive(1470px){
         width: 80%;
-        height: calc(100vh - 147px);
+        height: calc(100vh - 187px);
     }
 }
 
@@ -1742,6 +1769,9 @@ footer i {
 .project-inside-pagenation {
     bottom: initial;
     height: 80%;
+    span {
+        font-size: 12px;
+    }
     @include responsive(900px){
         height: 100%;
     }

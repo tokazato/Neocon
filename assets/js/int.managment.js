@@ -14,7 +14,7 @@ var swiper2 = new Swiper('.swiper-container', {
     breakpoints: {
       // when window width is >= 320px
       0: {
-        spaceBetween: 62,
+        spaceBetween: 60,
       },
       // when window width is >= 640px
       680: {

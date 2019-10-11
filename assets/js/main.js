@@ -11,9 +11,9 @@ $(document).ready(function(){
         $(".burger").removeClass("active");
         $('body').removeClass("active");
     })
-    $(".openDropDownLink").on('click', function(){
-        $('.dropDownContentBox').toggleClass("active");
-    });
+    // $(".openDropDownLink").hover(function(){
+    //     $('#drop-down-box').toggleClass("active");
+    // });
     $(".text-send-message-box").on("click", function(){
         $(".contact-form").slideDown('slow');
         $(this).css("background", "#1D2022");
@@ -34,9 +34,6 @@ $(document).ready(function(){
 
 
 
-        // smallImg = $(this).attr('src');
-        // $(this).attr('src', bigImg );
-        // bigImg.attr('src', smallImg);
         
     })
     
