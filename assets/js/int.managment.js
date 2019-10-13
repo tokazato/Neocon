@@ -22,8 +22,18 @@ var swiper2 = new Swiper('.swiper-container', {
       }
     },
   });
+  
 
   
+
+  swiper2.on('slideChange', function () {
+    var active = document.getElementsByClassName('swiper-pagination-current')[0].innerHTML;
+    var activeItem = document.getElementById(active);  
+    var activeLink = document.getElementsByClassName('active-link')[0];
+    activeLink.className = '';
+    activeItem.className = " active-link";
+    console.log( active, activeItem);
+  });
 
 
 

@@ -243,18 +243,11 @@ nav {
     max-width: 1552px !important;
     margin: 0 auto !important;
     width: 90%;
-    // bottom: 300px;
     position: absolute;
     @include responsive(900px){
-        bottom: 33px;
+        top: 104%;
         left: 360px;
-        // width: 35%;
-        // display: none
         width: calc(100% - 500px);
-    }
-    @include responsive(1200px){
-        // width: 50%;
-        
     }
 }
 .swiper-scrollbar-drag {
@@ -475,18 +468,21 @@ nav {
       }
 
 }
+.main-page-footer {
+    position: static;
+}
 footer {
     height: 60px;
     border-top: 1px solid #1D2022;
     @include responsive(900px){
-        border-top: initial;
-        position: absolute;
-        bottom: 10px;
-        left: 0;
-        right: 0;
-        width: 100%;
-        max-width: 1552px;
-        margin: 0 auto;
+        // border-top: initial;
+        // position: absolute;
+        // bottom: 10px;
+        // left: 0;
+        // right: 0;
+        // width: 100%;
+        // max-width: 1552px;
+        // margin: 0 auto;
     }
 }
 .footerContent {
@@ -1070,7 +1066,7 @@ footer i {
             transition: 0.3s ease;
         }
     }
-    a.active {
+    a.active-link {
         color: $color-orange;
     }
 }
@@ -1080,13 +1076,12 @@ footer i {
 
 // inservices 
 .inservice-box {
-    padding: 0 16px;
-    height: 60vh;
+    padding: 20px 16px;
     display: flex;
     width: 100%;
-    // min-height: calc(100vh - 150px);
+    min-height: calc(100vh - 210px);
     @include responsive(1100px){
-        height: 70vh;
+        // height: 700px;
     }
 }
 .inservice-swiper-slide {
@@ -1095,8 +1090,14 @@ footer i {
     justify-content: space-between;
 }
 .inservice-slider-box {
-    height: 100%;
+    height: 500px;
     width: 80%;
+    @include responsive(1100px){
+        height: 600px;
+    }
+    @include responsive(1300px){
+        height: 750px;
+    }
 }
 .inservice-img-text {
     color: #fff;
@@ -1113,6 +1114,7 @@ footer i {
 .inservices-img-box {
     
     height: 100%;
+    width: 400px;
     object-fit: cover;
     @include responsive(1100px){
         width: 550px;
@@ -1126,12 +1128,19 @@ footer i {
     height: 100%;
 }
 .inservice-swiper-arrow-buttons-box {
-    height: 100%;
+    height: 500px;
     width: 60px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     margin-left: 25px;
+    position: relative;
+    @include responsive(1100px){
+        height: 600px;
+    }
+    @include responsive(1300px){
+        height: 750px;
+    }
 }
 .inservice-swiper-arrow-buttons-prev, .inservice-swiper-arrow-buttons-next {
     color: #fff;
@@ -1139,6 +1148,48 @@ footer i {
     font-family: arial2010;
     outline: none;
     cursor: pointer;
+}
+.main-circle {
+    height: 420px;
+    width: 420px;
+    background: white;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%) rotate(0deg);
+    transition: 0.3s ease;
+    left: -330px;
+    border-radius: 50%;
+    overflow: hidden;
+    @include responsive(1100px){
+        height: 520px;
+        width: 520px;
+        left: -425px;
+    }
+    @include responsive(1300px){
+        height: 650px;
+        width: 650px;
+        left: -525px;
+    }
+}
+.main-circle-center {
+    width: calc(100% - 3px);
+    height: calc(100% - 3px);
+    background: $color-black;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 50%;
+    z-index: 9;
+}
+.main-circle-orange {
+    width: 20%;
+    height: calc(100% / 5);
+    background: $color-orange;
+    border-radius: 50%;
+    position: absolute;
+    right: 0;
+    transform: rotate(-180deg);
 }
 
 
