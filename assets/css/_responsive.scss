@@ -3,3 +3,8 @@
         @content;
     }
 }
+@mixin responsive-height($param) {
+    @media screen and (max-height: $param)  {
+        @content;
+    }
+}
