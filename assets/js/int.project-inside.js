@@ -11,6 +11,7 @@ var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
     }
   },
+  loop: true,
   navigation: {
     nextEl: '.project-inside-next',
     prevEl: '.project-inside-prev',

@@ -4,12 +4,14 @@ $(document).ready(function(){
         $(this).addClass("active");
         $(".hide").css("display", "flex");
         $('body').addClass("active");
+        $('.page-name').css('display', 'none' )
     })
     $(".hide").on("click", function(){
         $(this).css("display", "none");
         $(".open-navigation-box").removeClass("active");
         $(".burger").removeClass("active");
         $('body').removeClass("active");
+        $('.page-name').css('display', 'flex' )
     })
     // $(".openDropDownLink").hover(function(){
     //     $('#drop-down-box').toggleClass("active");
@@ -24,12 +26,12 @@ $(document).ready(function(){
     // project-inside
     
    
-    $('.project-inside-small-img').on('click', function(){
-        var smallImg = $('.project-inside-small-img').attr('src');
-        var bigImg = $(".project-inside-big-img").attr('src');
-        $(".project-inside-big-img").attr('src', smallImg );
-        $('.project-inside-small-img').attr('src', bigImg );
-    })
+    // $('.project-inside-small-img').on('click', function(){
+    //     var smallImg = $('.project-inside-small-img').attr('src');
+    //     var bigImg = $(".project-inside-big-img").attr('src');
+    //     $(".project-inside-big-img").attr('src', smallImg );
+    //     $('.project-inside-small-img').attr('src', bigImg );
+    // })
 
 
     var mapStyle = [

@@ -127,7 +127,7 @@ nav {
     min-height: calc(100vh - 110px);
     max-height: calc(100vh - 85px);
     color: #fff;
-    @include responsive-height(600px){
+    @include responsive-height(680px){
         overflow-y: scroll;
      }
     @include responsive(900px){
@@ -160,6 +160,7 @@ nav {
 }
 .openDropDownLink {
     display: flex;
+    position: relative;
     &:hover .drop-down-box {
         @include responsive(900px){
             display: block;
@@ -167,7 +168,7 @@ nav {
     }
 }
 .dropDownContentBox {
-    padding-left: 60px;
+    padding-left: 47px;
     li {
         padding: 0 !important;
     }
@@ -175,8 +176,8 @@ nav {
 .drop-down-box {
     display: none;
     position: absolute;
-    top: 22%;
-    left: 56%;
+    top: -240px;
+    right: -160px;
 }
 .dropDownContentBox > li {
         padding: 10px 0;
@@ -267,7 +268,7 @@ nav {
         // top: 104%;
         bottom: -30px;
         left: 360px;
-        width: calc(100% - 500px);
+        width: calc(100% - 530px);
         height: calc(100vh - 30px);
     }
 }
@@ -568,15 +569,15 @@ footer i {
         display: flex;
     }
     @include responsive(900px){
-        min-height: calc(100vh - 220px);
+        min-height: calc(100vh - 240px);
     }
 }
 .aboutas-content img {
     width: 100%;
     max-width: 1100px;
     @include responsive(800px){
-        width: 60vw;
-        height: 700px;
+        width: 90vw;
+        height: 670px;
     }
 }
 .aboutas-description-box {
@@ -586,7 +587,7 @@ footer i {
     background: rgba(29, 32, 34, 0.6);
     padding: 4px 10px 42px 10px;
     @include responsive(800px){
-        position: absolute;
+       position: absolute;
        width: 780px;
        height: 500px;
        top: 50%;
@@ -1107,10 +1108,10 @@ footer i {
     width: 100%;
     @include responsive(900px){
         display: flex;
-        height: calc(100vh - 210px);
+        min-height: calc(100vh - 210px);
     }
     @include responsive(1400px){
-        height: calc(100vh - 150px);
+        min-height: calc(100vh - 150px);
     }
 }
 .services-page-desctop-version-navigation {
@@ -1121,6 +1122,8 @@ footer i {
         color: $color-gray;
         font-size: 26px;
         font-family: tatishvili;
+        margin-bottom: 23px;
+
     }
     a {
         color: #fff;
@@ -1312,6 +1315,7 @@ footer i {
 }
 .map {
     height: 291px;
+    width: 166px;
     @include responsive(700px){
         height: 100%;
         width: 300px;
@@ -1692,9 +1696,16 @@ footer i {
     padding-right: 25px;
     @include responsive(900px){
         padding: 0 25px;
-        width: 70%;
         position: relative;
         bottom: 70px;
+     }
+     p {
+        @include responsive(1050px){
+            font-size: 16px;
+        }
+        @include responsive(1250px){
+            font-size: 20px;
+        }
      }
 }
 .project-inside-prev-button, .project-inside-next-button {
@@ -2024,6 +2035,10 @@ footer i {
     left: -16px;
     color: $color-gray;
 }
+
+
+
+
 
 
 
