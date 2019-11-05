@@ -23,6 +23,7 @@ var swiper2 = new Swiper('.swiper-container', {
     },
   });
   
+  // ---------- get active link 
   swiper2.on('slideChange', function () {
     var active = document.getElementsByClassName('swiper-pagination-current')[0].innerHTML;
     var activeItem = document.getElementById(active);  

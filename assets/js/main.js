@@ -1,4 +1,7 @@
 $(document).ready(function(){
+// ------------- start jquery
+
+// ------------ open burger menu
     $('.burger').on("click", function(){
         $(".open-navigation-box").addClass('active');
         $(this).addClass("active");
@@ -6,6 +9,8 @@ $(document).ready(function(){
         $('body').addClass("active");
         $('.page-name').css('display', 'none' )
     })
+
+// ------------ close burger menu
     $(".hide").on("click", function(){
         $(this).css("display", "none");
         $(".open-navigation-box").removeClass("active");
@@ -16,6 +21,8 @@ $(document).ready(function(){
     // $(".openDropDownLink").hover(function(){
     //     $('#drop-down-box').toggleClass("active");
     // });
+
+// ------------- contact page: send message button slidedown
     $(".text-send-message-box").on("click", function(){
         $(".contact-form").slideDown('slow');
         $(this).css("background", "#1D2022");
@@ -23,9 +30,8 @@ $(document).ready(function(){
         $(this).css("cursor", "not-allowed");
     })
 
-    // project-inside
     
-   
+// ------------ project inside page: exchange img place 
     // $('.project-inside-small-img').on('click', function(){
     //     var smallImg = $('.project-inside-small-img').attr('src');
     //     var bigImg = $(".project-inside-big-img").attr('src');
@@ -34,6 +40,7 @@ $(document).ready(function(){
     // })
 
 
+// -------------- contact page: map 
     var mapStyle = [
         {
             "featureType": "all",
@@ -418,7 +425,14 @@ $(document).ready(function(){
           styles: mapStyle
         });
       }
-      initMap()
+      try {
+        initMap()
+      } catch (error) {   
+    }
+
+
+
+// ---------------  end jquery   
 });
 
 

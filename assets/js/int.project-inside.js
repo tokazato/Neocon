@@ -11,7 +11,7 @@ var swiper = new Swiper('.swiper-container', {
         direction: 'horizontal',
     }
   },
-  loop: true,
+  // loop: true,
   navigation: {
     nextEl: '.project-inside-next',
     prevEl: '.project-inside-prev',
@@ -27,3 +27,22 @@ var swiper = new Swiper('.swiper-container', {
       type: 'fraction',
     },
 });
+
+
+
+var slideReal =  swiper.slides.index 
+var slideLeng =  swiper.slides.length 
+
+// -------------- my loop slider
+swiper.on('slideChangeTransitionEnd', function(){
+  if(this.realIndex == slideLeng -1 ){
+  // swiper.on('slideChange', function(){
+      swiper.slideTo(0)
+      return false ;
+      
+    // }) 
+  }
+})
+
+
+

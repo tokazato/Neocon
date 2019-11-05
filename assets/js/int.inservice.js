@@ -10,7 +10,7 @@ var swiper = new Swiper('.swiper-container', {
     },
   });
 
-  
+  // ------------- scrollbar 
   swiper.on('slideChange', function () {
     let goDown = (90 / 5 * this.realIndex);
     console.log(goDown);
