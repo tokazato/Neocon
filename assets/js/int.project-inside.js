@@ -34,7 +34,7 @@ var slideReal =  swiper.slides.index
 var slideLeng =  swiper.slides.length 
 
 // -------------- my loop slider
-swiper.on('slideChangeTransitionEnd', function(){
+swiper.on('slideChange', function(){
   if(this.realIndex == slideLeng -1 ){
   // swiper.on('slideChange', function(){
       swiper.slideTo(0)
