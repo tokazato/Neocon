@@ -211,7 +211,7 @@ nav {
   padding: 13px 0;
   font-size: 24px;
   font-family: tatishviliNormal;
-  text-align: right;
+  text-align: center;
 }
 
 @media screen and (min-width: 900px) {
@@ -861,11 +861,19 @@ footer i:hover {
 .page-name {
   color: #fff;
   font-size: 18px;
+  position: relative;
+  right: 5px;
 }
 
 @media screen and (min-width: 700px) {
   .page-name {
     font-size: 24px;
+  }
+}
+
+@media screen and (min-width: 900px) {
+  .page-name {
+    right: 70px;
   }
 }
 
@@ -892,6 +900,8 @@ footer i:hover {
 .aboutas-content img {
   width: 100%;
   max-width: 1100px;
+  -o-object-fit: cover;
+     object-fit: cover;
 }
 
 @media screen and (min-width: 800px) {
@@ -901,12 +911,18 @@ footer i:hover {
   }
 }
 
+@media screen and (max-width: 450px) {
+  .aboutas-content img {
+    height: 188px;
+  }
+}
+
 .aboutas-description-box {
   position: relative;
   bottom: 25px;
   color: #fff;
   background: rgba(29, 32, 34, 0.6);
-  padding: 4px 10px 42px 10px;
+  padding: 20px 43px 52px 76px;
 }
 
 @media screen and (min-width: 800px) {
@@ -915,7 +931,7 @@ footer i:hover {
     width: 780px;
     height: 500px;
     top: 50%;
-    right: 0;
+    right: 16px;
     -webkit-transform: translate(0, -50%);
             transform: translate(0, -50%);
   }
@@ -983,13 +999,7 @@ footer i:hover {
 
 @media screen and (min-width: 550px) {
   .managment-swiper-box {
-    height: 700px;
-  }
-}
-
-@media screen and (min-width: 900px) {
-  .managment-swiper-box {
-    height: 723px;
+    height: 764px;
   }
 }
 
@@ -1364,7 +1374,6 @@ footer i:hover {
 @media screen and (min-width: 500px) {
   .management2-slider-img-box {
     height: 420px;
-    width: 100%;
   }
 }
 
@@ -1378,7 +1387,7 @@ footer i:hover {
 @media screen and (min-width: 900px) {
   .management2-slider-img-box {
     height: 460px;
-    width: 100%;
+    width: 400px;
     max-width: 620px;
   }
 }
@@ -1386,8 +1395,13 @@ footer i:hover {
 @media screen and (min-width: 1100px) {
   .management2-slider-img-box {
     height: 692px;
-    width: 100%;
-    max-width: 620px;
+    width: 490px;
+  }
+}
+
+@media screen and (min-width: 1320px) {
+  .management2-slider-img-box {
+    width: 620px;
   }
 }
 
@@ -1418,6 +1432,7 @@ footer i:hover {
 @media screen and (min-width: 700px) {
   .management2-slider-arrow-box {
     top: 460px;
+    width: 65%;
   }
 }
 
@@ -1572,6 +1587,12 @@ footer i:hover {
 
 .service-headerContent {
   height: 80%;
+}
+
+@media screen and (min-width: 900px) {
+  .service-headerContent {
+    height: 100%;
+  }
 }
 
 .services-open-navigation-box {
@@ -1803,6 +1824,7 @@ footer i:hover {
   display: flex;
   width: 100%;
   min-height: calc(100vh - 210px);
+  overflow: hidden;
 }
 
 .inservice-swiper-slide {
@@ -1819,7 +1841,7 @@ footer i:hover {
 
 .inservice-slider-box {
   height: 500px;
-  width: 80%;
+  width: 88%;
 }
 
 @media screen and (min-width: 1100px) {
@@ -1844,9 +1866,10 @@ footer i:hover {
   margin-bottom: 70px;
 }
 
-.inservice-img-text p {
+.inservice-img-text p, .inservice-img-text a, .inservice-img-text div {
   font-size: 20px;
   font-family: arial2010;
+  color: #fff;
 }
 
 .inservices-img-box {
@@ -2132,6 +2155,7 @@ footer i:hover {
   margin-bottom: 26px;
   padding-bottom: 10px;
   color: #fff;
+  padding-left: 20px;
 }
 
 @media screen and (min-width: 700px) {
@@ -2155,12 +2179,42 @@ footer i:hover {
 }
 
 .contact-form textarea {
-  margin-bottom: 40px;
+  border: 1px solid #58595B;
+  padding-top: 20px;
 }
 
-@media screen and (min-width: 700px) {
-  .contact-form textarea {
-    margin-bottom: 177px;
+.textarea-box {
+  position: relative;
+  width: 100%;
+  margin: 0 auto;
+}
+
+@media screen and (min-width: 1100px) {
+  .textarea-box {
+    width: 460px;
+  }
+}
+
+.textarea-text {
+  position: absolute;
+  left: 13%;
+  top: -11px;
+  color: #6e6f72;
+  font-size: 14px;
+  font-family: arial2010;
+  background: #111517;
+  padding: 0 5px;
+}
+
+@media screen and (min-width: 1100px) {
+  .textarea-text {
+    left: 20px;
+  }
+}
+
+@media screen and (min-width: 1000px) {
+  .textarea-text {
+    font-size: 20px;
   }
 }
 
@@ -2374,6 +2428,7 @@ footer i:hover {
   -webkit-transition: 0.3s ease;
   transition: 0.3s ease;
   cursor: pointer;
+  color: #fff;
 }
 
 .project-title:hover {
@@ -2395,6 +2450,12 @@ footer i:hover {
 
 .project-swiper-img-box {
   height: 100%;
+}
+
+@media screen and (max-width: 450px) {
+  .project-swiper-img-box {
+    height: 85%;
+  }
 }
 
 .project-swiper-img-address {
@@ -2428,23 +2489,11 @@ footer i:hover {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  font-size: 13px;
+  font-size: 18px;
   color: #fff;
   height: 100%;
   width: 100%;
   padding-left: 10px;
-}
-
-@media screen and (min-width: 380px) {
-  .project-swiper-img-person-position {
-    font-size: 16px;
-  }
-}
-
-@media screen and (min-width: 420px) {
-  .project-swiper-img-person-position {
-    font-size: 18px;
-  }
 }
 
 @media screen and (min-width: 900px) {
@@ -2572,6 +2621,9 @@ footer i:hover {
             align-items: flex-end;
     font-size: 16px;
     font-family: arial2010;
+    position: absolute;
+    bottom: 0;
+    right: -145px;
   }
 }
 
@@ -2614,6 +2666,9 @@ footer i:hover {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
   width: 100%;
 }
 
@@ -2848,6 +2903,13 @@ footer i:hover {
 .project-inside-swiper-slider-small-img-box img {
   width: 78px;
   height: 103px;
+}
+
+@media screen and (min-width: 700px) {
+  .project-inside-swiper-slider-small-img-box img {
+    width: 100px;
+    height: 150px;
+  }
 }
 
 @media screen and (min-width: 900px) {
@@ -3188,6 +3250,8 @@ footer i:hover {
       -ms-flex-pack: justify;
           justify-content: space-between;
   height: 150px;
+  position: relative;
+  z-index: 2;
 }
 
 .project-inside-footer-desctop-icons-box a {

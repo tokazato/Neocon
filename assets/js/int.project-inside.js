@@ -17,7 +17,7 @@ var swiper = new Swiper('.swiper-container', {
     prevEl: '.project-inside-prev',
   },
     slidesPerView: 1,
-    spaceBetween: 30,
+    spaceBetween: 130,
     mousewheel: true,
     scrollbar: {
         el: '.managment-swiper-scrollbar',
@@ -39,7 +39,6 @@ swiper.on('slideChange', function(){
   // swiper.on('slideChange', function(){
       swiper.slideTo(0)
       return false ;
-      
     // }) 
   }
 })

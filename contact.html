@@ -128,7 +128,10 @@
                      <form class="contact-form" action="post">
                          <input type="text" name="firstName" placeholder="სახელი" required>
                          <input type="tel" name="telefon" placeholder="ტელეფონი / მეილი" required>
-                         <textarea name="description" cols="30" rows="1" placeholder="ტექსტი" required></textarea>
+                         <div class="textarea-box">
+                             <p class="textarea-text">ტექსტი</p>
+                            <textarea name="description" cols="30" rows="6" required></textarea>
+                         </div>
                          <input class="submit" type="submit" value="გაგზავნა">
                      </form>
                 </div>

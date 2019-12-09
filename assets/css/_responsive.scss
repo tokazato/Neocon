@@ -3,6 +3,11 @@
         @content;
     }
 }
+@mixin max-responsive-w($param) {
+    @media screen and (max-width: $param)  {
+        @content;
+    }
+}
 @mixin responsive-height($param) {
     @media screen and (max-height: $param)  {
         @content;
